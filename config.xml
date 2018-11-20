@@ -25,9 +25,15 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-geolocation" spec="~4.0.1" />
-    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-        <string>test if message is displayed in pgb</string>
-    </edit-config>
+   <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+<string>Wech utilise la géolocalisation pour trouver toutes les sorties autour de vous.</string>  
+</edit-config> 
+	<edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">  
+<string>Wech a besoin d'accéder à votre localisation afin de fonctionner.</string>  
+</edit-config>  
+<edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">  
+<string>Wech utilise la géolocalisation pour trouver toutes les sorties autour de vous.</string>  
+</edit-config>  
 	
 	
 	
