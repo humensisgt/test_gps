@@ -11,7 +11,7 @@
     <content src="index.html" />
 	
 
-    <plugin name="phonegap-plugin-push" source="npm" spec="~1.8.0">
+    <plugin name="phonegap-plugin-push" source="npm" spec="~2.2.2">
         <variable name="SENDER_ID" value="XXXXXXX" />
     </plugin>
   
