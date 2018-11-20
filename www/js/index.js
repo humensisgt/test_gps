@@ -22,18 +22,25 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
-
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-    
-        navigator.geolocation.getCurrentPosition(this.onSuccess, this.onError);
-    },
-	onSuccess: function(position) {
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
+        var onSuccess = function(position) {
             alert('Latitude: '          + position.coords.latitude          + '\n' +
                   'Longitude: '         + position.coords.longitude         + '\n' +
                   'Altitude: '          + position.coords.altitude          + '\n' +
@@ -42,11 +49,15 @@ var app = {
                   'Heading: '           + position.coords.heading           + '\n' +
                   'Speed: '             + position.coords.speed             + '\n' +
                   'Timestamp: '         + position.timestamp                + '\n');
-        },
-	onError: function(error) {
+        };
+    
+        function onError(error) {
             alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
         }
+    
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
 };
 
 app.initialize();
