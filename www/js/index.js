@@ -22,24 +22,18 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
+
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-       
 
-        
-        
     
         navigator.geolocation.getCurrentPosition(this.onSuccess, this.onError);
     },
-	onSuccess : function(position) {
+	onSuccess: function(position) {
             alert('Latitude: '          + position.coords.latitude          + '\n' +
                   'Longitude: '         + position.coords.longitude         + '\n' +
                   'Altitude: '          + position.coords.altitude          + '\n' +
@@ -49,7 +43,7 @@ var app = {
                   'Speed: '             + position.coords.speed             + '\n' +
                   'Timestamp: '         + position.timestamp                + '\n');
         },
-	onError:function(error) {
+	onError: function(error) {
             alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
         }
