@@ -45,6 +45,42 @@ body {
     width:100%;
 }
 
+
+
+
+/*___loader___*/
+
+#loading {
+	/*background: #000 url('img/overlay-tile.png') repeat;*/
+}
+
+#loading img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	margin: -25px 0 0 -25px;
+	/*icon:letit;*/
+}
+
+#loading #loader-icon {
+	width: 80px;
+	height: 80px;
+	margin: -40px 0 0 -40px;
+}
+
+#loading #loader-icon-inverse {
+	width: 100px;
+	height:100px;
+	margin: -50px 0 0 -50px;
+	-ms-transform: scale(-1, -1); /* IE 9 */
+    -webkit-transform: scale(-1, -1); /* Safari */
+    transform: scale(-1, -1);
+}
+
+
+
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
@@ -87,7 +123,7 @@ h1 {
     padding:2px 0px;
 }
 
-.event.listening {
+.event.waiting {
     background-color:#333333;
     display:block;
 }
@@ -98,17 +134,18 @@ h1 {
 }
 
 @keyframes fade {
+
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
