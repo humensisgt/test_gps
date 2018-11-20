@@ -44,7 +44,7 @@
         <icon height="72" platform="ios" src="www/res/icon/ios/Icon-72.png" width="72" />
         <icon height="144" platform="ios" src="www/res/icon/ios/Icon-144.png" width="144" />
         <icon height="76" platform="ios" src="www/res/icon/ios/Icon-76.png" width="76" />
-        <icon height="152" platform="ios" src="www/res/icon/ios/Icon-152x.png" width="152" />
+        <icon height="152" platform="ios" src="www/res/icon/ios/Icon-152.png" width="152" />
         <icon height="29" platform="ios" src="www/res/icon/ios/Icon-29.png" width="29" />
         <icon height="58" platform="ios" src="www/res/icon/ios/Icon-58.png" width="58" />
         <icon height="87" platform="ios" src="www/res/icon/ios/Icon-87.png" width="87" />
