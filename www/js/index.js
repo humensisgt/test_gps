@@ -32,15 +32,14 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+       
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-        var onSuccess = function(position) {
+        
+        
+    
+        navigator.geolocation.getCurrentPosition(this.onSuccess, this.onError);
+    },
+	onSuccess : function(position) {
             alert('Latitude: '          + position.coords.latitude          + '\n' +
                   'Longitude: '         + position.coords.longitude         + '\n' +
                   'Altitude: '          + position.coords.altitude          + '\n' +
@@ -49,15 +48,11 @@ var app = {
                   'Heading: '           + position.coords.heading           + '\n' +
                   'Speed: '             + position.coords.speed             + '\n' +
                   'Timestamp: '         + position.timestamp                + '\n');
-        };
-    
-        function onError(error) {
+        },
+	onError:function(error) {
             alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
         }
-    
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
 };
 
 app.initialize();
