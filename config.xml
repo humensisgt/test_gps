@@ -24,6 +24,13 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+	<plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.3" />
+    <plugin name="phonegap-plugin-push" source="npm" spec="~1.8.0">
+        <variable name="SENDER_ID" value="XXXXXXX" />
+    </plugin>
+    <plugin name="cordova-plugin-console" source="npm" spec="~1.0.3" />
+    <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-geolocation" spec="~4.0.1" />
    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
 <string>Wech utilise la géolocalisation pour trouver toutes les sorties autour de vous.</string>  
@@ -34,7 +41,7 @@
 <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">  
 <string>Wech utilise la géolocalisation pour trouver toutes les sorties autour de vous.</string>  
 </edit-config>  
-
+ 
 	
 	
 	 <platform name="ios">
