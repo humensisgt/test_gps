@@ -46,7 +46,9 @@
 <string>Wech utilise la géolocalisation pour trouver toutes les sorties autour de vous.</string>  
 </edit-config>  
  
-	
+<config-file platform="ios"  parent="aps-environment">
+   <string>production</string>
+ </config-file>	
 	
 	 <platform name="ios">
 		<icon height="57" platform="ios" src="www/res/icon/ios/Icon-57.png" width="57" />
